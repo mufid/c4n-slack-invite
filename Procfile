@@ -1,1 +1,1 @@
-web: bin/slackin --channels "$SLACK_CHANNELS" --port $PORT $SLACK_SUBDOMAIN $SLACK_API_TOKEN
+web: bin/slackin --discourse-api-key "$DISCOURSE_API_KEY" --discourse-api-username "$DISCOURSE_API_USERNAME" --discourse-base-url "$DISCOURSE_BASE_URL" --channels "$SLACK_CHANNELS" --port $PORT $SLACK_SUBDOMAIN $SLACK_API_TOKEN

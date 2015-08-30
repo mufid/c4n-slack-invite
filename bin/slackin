@@ -13,9 +13,13 @@ program
 .option('-i, --interval <int>', 'How frequently (ms) to poll Slack [$SLACK_INTERVAL or 1000]', process.env.SLACK_INTERVAL || 1000)
 .option('-s, --silent', 'Do not print out warns or errors')
 .option('-c, --css <file>', 'Full URL to a custom CSS file to use on the main page')
+.option('-a, --discourse-base-url <url>', 'Discourse base URL')
+.option('-a, --discourse-api-key <api key>', 'Discourse API Key')
+.option('-a, --discourse-api-username <username>', 'Discourse API Username. Default to system', 'system')
 .parse(process.argv);
 
 if (program.args.length != 2) {
+  console.log(program.args);
   program.help();
 } else {
   program.org = program.args[0];
